@@ -1,0 +1,57 @@
+.start {
+  width: 1200px;
+  height: 120px;
+  background: #2b3934;
+  margin: auto;
+}
+
+.board {
+  width: 1200px;
+  height: 600px;
+  background: grey;
+  margin: auto;
+}
+
+.finish {
+  width: 1200px;
+  height: 100px;
+  background: #156627;
+  margin: auto;
+}
+
+/* Lanes Styling*/
+
+.laneOne {
+  width: 1200px;
+  height:100px;
+  border-bottom: 3px dashed white;
+}
+
+.laneTwo {
+  width: 1200px;
+  height:100px;
+  border-bottom: 3px dashed white;
+}
+
+.laneThree {
+  width: 1200px;
+  height:100px;
+  border-bottom: 3px dashed white;
+}
+
+.laneFour{
+  width: 1200px;
+  height:100px;
+  border-bottom: 3px dashed white;
+}
+
+.laneFive{
+  width: 1200px;
+  height:100px;
+  border-bottom: 3px dashed white;
+}
+
+.laneSix {
+  width: 1200px;
+  height:100px;
+}
