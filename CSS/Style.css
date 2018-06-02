@@ -1,4 +1,16 @@
-.start {
+
+/* The Chicken */
+.player {
+  position:relative;
+}
+
+.chicken {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
+.finish {
   width: 1200px;
   height: 120px;
   background: #2b3934;
@@ -7,51 +19,54 @@
 
 .board {
   width: 1200px;
-  height: 600px;
+  height: 800px;
   background: grey;
+  position: relative;
   margin: auto;
 }
 
-.finish {
+.start{
   width: 1200px;
-  height: 100px;
+  height: 80px;
   background: #156627;
   margin: auto;
 }
 
-/* Lanes Styling*/
+
+/* The Lanes */
 
 .laneOne {
   width: 1200px;
-  height:100px;
+  height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneTwo {
   width: 1200px;
-  height:100px;
+  height: 97px;
   border-bottom: 3px dashed white;
 }
 
 .laneThree {
   width: 1200px;
-  height:100px;
+  height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneFour{
   width: 1200px;
-  height:100px;
+  height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneFive{
   width: 1200px;
-  height:100px;
+  height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneSix {
   width: 1200px;
-  height:100px;
+  height:97px;
+  border-bottom: 3px dashed white;
 }
