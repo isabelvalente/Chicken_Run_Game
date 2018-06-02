@@ -35,37 +35,60 @@
 /* The Lanes */
 
 .laneOne {
+  position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneTwo {
+  position: relative;
   width: 1200px;
   height: 97px;
   border-bottom: 3px dashed white;
 }
 
 .laneThree {
+  position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneFour{
+  position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneFive{
+  position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
 .laneSix {
+  position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
+}
+
+/* Cars */
+
+.leftCars {
+  position:absolute;
+  margin-top: 20px;
+  height: 60px;
+  width: 100px;
+}
+
+.rightCars {
+  position:absolute;
+  left:1100px;
+  margin-top: 20px;
+  height: 60px;
+  width: 100px;
 }

@@ -1,17 +1,16 @@
 $(document).ready(function(){
 
   // Adding the chicken to the board
-  console.log('working');
 
   $(function(){
 
     var chicken = "<img class='chicken' src='images/chicken.png'>";
     $(".player").append(chicken);
 
+    // Function to move chicken
     $(document).keydown(function(e){
 
       var position = $(".player").position();
-
 
       switch(e.keyCode)
       {
@@ -34,8 +33,17 @@ $(document).ready(function(){
 
   });
 
+  // Adding cars to the Board
 
-
+  var slowCar = "<img class='leftCars' src='images/fastCar.png'>";
+  $(".laneSix").append(slowCar);
+  $(".laneFour").append(slowCar);
+  $(".laneOne").append(slowCar);
+  var fastCar = "<img class='rightCars' src='images/slowCar.png'>";
+  $(".laneFive").append(fastCar);
+  $(".laneTwo").append(fastCar);
+  var fasterCar = "<img class='leftCars' src='images/fasterCar.png'>";
+  $(".laneThree").append(fasterCar);
 
 
 
