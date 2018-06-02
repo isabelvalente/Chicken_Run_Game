@@ -1,7 +1,7 @@
 
 /* The Chicken */
 .player {
-  position:relative;
+  position:absolute;
 }
 
 .chicken {
