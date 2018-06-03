@@ -78,17 +78,36 @@
 
 /* Cars */
 
-.leftCars {
+.slowCars {
   position:absolute;
   margin-top: 20px;
   height: 60px;
   width: 100px;
 }
 
-.rightCars {
+.fastCars {
   position:absolute;
   left:1100px;
   margin-top: 20px;
   height: 60px;
   width: 100px;
+}
+
+.fastestCars {
+  position:absolute;
+  margin-top: 20px;
+  height: 60px;
+  width: 100px;
+}
+
+/* Start button  */
+
+.start {
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  width: 80px;
+  height: 30px;
 }

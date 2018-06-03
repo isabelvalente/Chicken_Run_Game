@@ -8,10 +8,11 @@ $(document).ready(function(){
     $(".player").append(chicken);
 
     // Function to move chicken
+
+
     $(document).keydown(function(e){
 
       var position = $(".player").position();
-
       switch(e.keyCode)
       {
         case 37: //Left
@@ -27,7 +28,6 @@ $(document).ready(function(){
           $(".player").css('top',position.top + 50 + 'px');
           break;
 
-
       }
     })
 
@@ -35,15 +35,41 @@ $(document).ready(function(){
 
   // Adding cars to the Board
 
-  var slowCar = "<img class='leftCars' src='images/fastCar.png'>";
-  $(".laneSix").append(slowCar);
-  $(".laneFour").append(slowCar);
-  $(".laneOne").append(slowCar);
-  var fastCar = "<img class='rightCars' src='images/slowCar.png'>";
-  $(".laneFive").append(fastCar);
-  $(".laneTwo").append(fastCar);
-  var fasterCar = "<img class='leftCars' src='images/fasterCar.png'>";
-  $(".laneThree").append(fasterCar);
+  var slowCars = "<img class='slowCars' src='images/fastCar.png'>";
+  $(".laneSix").append(slowCars);
+  $(".laneFour").append(slowCars);
+  $(".laneOne").append(slowCars);
+  var fastCars = "<img class='fastCars' src='images/slowCar.png'>";
+  $(".laneFive").append(fastCars);
+  $(".laneTwo").append(fastCars);
+  var fastestCars = "<img class='fastestCars' src='images/fasterCar.png'>";
+  $(".laneThree").append(fastestCars);
+
+
+  // Function to move the Cars
+
+
+    $(".startbtn").click(function(){
+    $('.slowCars').animate({left: "+=1100px"}, 3000);
+    $('.fastCars').animate({left: "-=1100px"}, 1500);
+    $('.fastestCars').animate({left: "+=1100px"}, 900);
+  });
+
+
+
+
+
+
+
+  // Collision
+
+
+
+
+
+
+
+
 
 
 
