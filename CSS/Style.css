@@ -34,68 +34,50 @@
 
 /* The Lanes */
 
-.laneOne {
+.slowLane{
   position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
-.laneTwo {
+.fastLane {
   position: relative;
   width: 1200px;
   height: 97px;
   border-bottom: 3px dashed white;
 }
 
-.laneThree {
+.fastestLane{
   position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
-.laneFour{
-  position: relative;
-  width: 1200px;
-  height:97px;
-  border-bottom: 3px dashed white;
-}
 
-.laneFive{
-  position: relative;
-  width: 1200px;
-  height:97px;
-  border-bottom: 3px dashed white;
-}
-
-.laneSix {
-  position: relative;
-  width: 1200px;
-  height:97px;
-  border-bottom: 3px dashed white;
-}
 
 /* Cars */
 
-.slowCars {
+.slowCar {
   position:absolute;
   margin-top: 20px;
   height: 60px;
   width: 100px;
 }
 
-.fastCars {
+.fastCar {
   position:absolute;
-  left:1100px;
+  left:1300px;
   margin-top: 20px;
   height: 60px;
   width: 100px;
 }
 
-.fastestCars {
+.fastestCar {
   position:absolute;
   margin-top: 20px;
+  /* background-image: url(images/fastestCar.png), no-repeat; */
   height: 60px;
   width: 100px;
 }

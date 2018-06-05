@@ -33,27 +33,42 @@ $(document).ready(function(){
 
   });
 
-  // Adding cars to the Board
-
-  var slowCars = "<img class='slowCars' src='images/fastCar.png'>";
-  $(".laneSix").append(slowCars);
-  $(".laneFour").append(slowCars);
-  $(".laneOne").append(slowCars);
-  var fastCars = "<img class='fastCars' src='images/slowCar.png'>";
-  $(".laneFive").append(fastCars);
-  $(".laneTwo").append(fastCars);
-  var fastestCars = "<img class='fastestCars' src='images/fasterCar.png'>";
-  $(".laneThree").append(fastestCars);
-
-
-  // Function to move the Cars
-
 
     $(".startbtn").click(function(){
-    $('.slowCars').animate({left: "+=1100px"}, 3000);
-    $('.fastCars').animate({left: "-=1100px"}, 1500);
-    $('.fastestCars').animate({left: "+=1100px"}, 900);
-  });
+      setInterval(moveFastCar,2000); // how often you want the cars to appear
+      setInterval(moveSlowCar,3000); // how often you want the cars to appear
+      setInterval(moveFastestCar,1500); // how often you want the cars to appear
+    });
+
+    function moveFastCar(){
+      $("<img class='fastCar'src='images/fastCar.png'>")
+      .appendTo(".fastLane")
+      .animate({left: "-=1500px"}, 5000) // How fast and far you want the cars to go
+      .delay(20)
+      .queue(function(){
+        $(this).remove();
+      });
+    }
+
+    function moveSlowCar(){
+      $("<img class='slowCar'src='images/slowCar.png'>")
+      .appendTo(".slowLane")
+      .animate({left: "+=1500px"}, 6000) // How fast and far you want the cars to go
+      .delay(40)
+      .queue(function(){
+        $(this).remove();
+      });
+    }
+
+    function moveFastestCar(){
+      $("<img class='fastestCar'src='images/fastestCar.png'>")
+      .appendTo(".fastestLane")
+      .animate({left: "+=1500px"}, 4000) // How fast and far you want the cars to go
+      .delay(20)
+      .queue(function(){
+        $(this).remove();
+      });
+    }
 
 
 
@@ -61,7 +76,17 @@ $(document).ready(function(){
 
 
 
-  // Collision
+
+
+
+
+
+
+
+
+
+
+
 
 
 
