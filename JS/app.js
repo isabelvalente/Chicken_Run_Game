@@ -2,10 +2,10 @@ $(document).ready(function(){
 
   // Cars stored as variables
 
-  var fastCar1 = `<img class='fastCar'src='images/fastCar.png'>`;
+  var fastCar1 = `<img class='fastCar' src='images/fastCar.png'>`;
   var fastCar2 = `<img class='fastCar'src='images/fastCar.png'>`;
-  var fastestCar = `<img class='fastestCar'src='images/fastestCar.png'>`;
-  var slowCar1 = `<img class='slowCar'src='images/slowCar.png'>`;
+  var fastestCar = `<img class='car fastestCar'src='images/fastestCar.png'>`;
+  var slowCar1 = `<img class='car'src='images/slowCar.png'>`;
   var slowCar2 = `<img class='slowCar'src='images/slowCar.png'>`;
   var slowCar3 = `<img class='slowCar' src='images/slowCar.png'>`;
 
@@ -30,103 +30,78 @@ $(document).ready(function(){
       break;
     }
   })
-  //
-  // $('.laneOne').append(slowCar3);
-  // var num = 0;
-  //
-  // setInterval(function(){
-  //   $('#car').css({
-  //     'left': `${num}px`
-  //   })
-  //   num++;
-  //   collide();
-  //   }
-  // ,10)
-
-  // var chick = {
-  //   top: $(".player").position().top,
-  //   left: $(".player").position().left
-  // }
-  // setInterval(function(){
-  //   chick.top = $(".player").position().top;
-  //   chick.left = $(".player").position().left;
-  //   console.log(chick.top);
-  //   // console.log($(".slowCar").position());
-  // },1000)
-
-
 
   // Functions to move cars across the board once
-  // function moveFastCar1(){
-  //   $(fastCar1)
-  //   .appendTo(".laneTwo")
-  //   .animate({left: "-=1500px"}, 5000)
-  //   .delay(20)
-  //   .queue(function(){
-  //     $(this).remove();
-  //   });
-  // }
+  function moveFastCar1(){
+    $(".car6")
+    .appendTo(".laneTwo")
+    .animate({left: "-=1500px"}, 5000)
+    .delay(20)
+    .queue(function(){
+      $(this).remove();
+    });
+  }
   //
-  // function moveFastCar2(){
-  //   $(fastCar2)
-  //   .appendTo(".laneFive")
-  //   .animate({left: "-=1500px"}, 5000)
-  //   .delay(20)
-  //   .queue(function(){
-  //     $(this).remove();
-  //   });
-  // }
-  //
-  // function moveSlowCar1(){
-  //   $(slowCar1)
-  //   .appendTo(".laneOne")
-  //   .animate({left: "+=1500px"}, 6000) // How fast and far you want the cars to go
-  //   .delay(40)
-  //   .queue(function(){
-  //     $(this).remove();
-  //   });
-  // }
-  //
-  // function moveSlowCar2(){
-  //   $(slowCar2)
-  //   .appendTo(".laneThree")
-  //   .animate({left: "+=1500px"}, 6000) // How fast and far you want the cars to go
-  //   .delay(40)
-  //   .queue(function(){
-  //     $(this).remove();
-  //   });
-  // }
-  //
-  // function moveSlowCar3(){
-  //   $(slowCar3)
-  //   .appendTo(".laneSix")
-  //   .animate({left: "+=1500px"}, 6000) // How fast and far you want the cars to go
-  //   .delay(40)
-  //   .queue(function(){
-  //     $(this).remove();
-  //   });
-  // }
-  //
-  // function moveFastestCar(){
-  //   $(fastestCar)
-  //   .appendTo(".laneFour")
-  //   .animate({left: "+=1500px"}, 4000) // How fast and far you want the cars to go
-  //   .delay(20)
-  //   .queue(function(){
-  //     $(this).remove();
-  //
-  //   });
-  // }
+  function moveFastCar2(){
+    $(".car4")
+    .appendTo(".laneFive")
+    .animate({left: "-=1500px"}, 5000)
+    .delay(20)
+    .queue(function(){
+      $(this).remove();
+    });
+  }
 
-  // Collision between chicken and Cars
+  function moveSlowCar1(){
+    $(".car")
+    .appendTo(".laneOne")
+    .animate({left: "+=1200px"}, 6000) // How fast and far you want the cars to go
+    .delay(10)
+    .queue(function(){
+      $(this).remove();
+    });
+  } console.log($(slowCar1));
+  //
+  function moveSlowCar2(){
+    $(".car2")
+    .appendTo(".laneThree")
+    .animate({left: "+=1500px"}, 4000) // How fast and far you want the cars to go
+    .delay(40)
+    .queue(function(){
+      $(this).remove();
+    });
+  } console.log($(".car2"));
 
-  // Positions of the chicken Object
+  function moveSlowCar3(){
+    $(".car5")
+    .appendTo(".laneSix")
+    .animate({left: "+=1500px"}, 6000) // How fast and far you want the cars to go
+    .delay(40)
+    .queue(function(){
+      $(this).remove();
+    });
+  }
+  //
+  function moveFastestCar(){
+    $(".car3")
+    .appendTo(".laneFour")
+    .animate({left: "+=1500px"}, 4000) // How fast and far you want the cars to go
+    .delay(20)
+    .queue(function(){
+      $(this).remove();
 
+    });
+  }
 
 
   // Checking when Car object and Chicken Object intersect
   var chicken = {};
   var carObj = {};
+  var carObj2 = {};
+  var carObj3 = {};
+  var carObj4 = {};
+  var carObj5 = {};
+  var carObj6 = {};
 
   function getCoords(){
 
@@ -143,35 +118,68 @@ $(document).ready(function(){
     carObj.right = carObj.left + 80;
     carObj.bottom = carObj.top + 80;
 
-    collision(chicken, carObj);
+    var car2 = $(".car2");
+    carObj2.left = car2.offset().left;
+    carObj2.top = car2.offset().top;
+    carObj2.right = carObj2.left + 80;
+    carObj2.bottom = carObj2.top + 80;
 
+    var car3 = $(".car3");
+    carObj3.left = car3.offset().left;
+    carObj3.top = car3.offset().top;
+    carObj3.right = carObj3.left + 80;
+    carObj3.bottom = carObj3.top + 80;
+    // console.log($(".car3"));
+
+    var car4 = $(".car4");
+    carObj4.left = car4.offset().left;
+    carObj4.top = car4.offset().top;
+    carObj4.right = carObj4.left + 80;
+    carObj4.bottom = carObj4.top + 80;
+
+    var car5 = $(".car5");
+    carObj5.left = car5.offset().left;
+    carObj5.top = car5.offset().top;
+    carObj5.right = carObj5.left + 80;
+    carObj5.bottom = carObj5.top + 80;
+
+
+    var car6 = $(".car6");
+    carObj6.left = car6.offset().left;
+    carObj6.top = car6.offset().top;
+    carObj6.right = carObj6.left + 80;
+    carObj6.bottom = carObj6.top + 80;
+
+    // Calling collisions functions to cause collisions after each car object and the chicken intersect
+    collision(chicken, carObj);
+    collision(chicken, carObj2);
+    collision(chicken, carObj3);
+    collision(chicken, carObj4);
+    collision(chicken, carObj5);
+    collision(chicken, carObj6);
   }
 
+  console.log($(".car"));
   function collision(chicken, carObj) {
 
     if (chicken.left <= carObj.right && carObj.left <= chicken.right && chicken.top <= carObj.bottom && carObj.top <= chicken.bottom) {
-      console.log("hit");
+      $(".player").hide();
     }
 
   }
 
 
-
-
   // Interval to move cars continuously
   $(".startbtn").click(function(){
-    // setInterval(moveFastCar1,2000); // how often you want the cars to appear
-    // setInterval(moveFastCar2,2000); // how often you want the cars to appear
-    // setInterval(moveSlowCar1,3000);
-    // setInterval(moveSlowCar2,3000);
-    // setInterval(moveSlowCar3,3000);
-    // setInterval(moveFastestCar,1500);
+    setInterval(moveFastCar1,2000);
+    setInterval(moveFastCar2,2000);
+    setInterval(moveSlowCar1,3000);
+    setInterval(moveSlowCar2,3000);
+    setInterval(moveSlowCar3,3000);
+    setInterval(moveFastestCar,1500);
   });
 
-  setInterval(getCoords,1000);
-
-
-
+  setInterval(getCoords,50);
 
 
 }); // end of $(document).ready()
