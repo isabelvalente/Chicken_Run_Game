@@ -1,4 +1,11 @@
-
+/* instructions screen */
+/* .Instructions {
+  width: 1200px;
+  height: 800px;
+  background: black;
+  position: relative;
+  margin: auto;
+} */
 /* The Chicken */
 .player {
   position:absolute;
@@ -35,21 +42,42 @@
 
 /* The Lanes */
 
-.slowLane{
+.laneSix{
   position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
-.fastLane {
+.laneOne{
+  position: relative;
+  width: 1200px;
+  height:97px;
+  border-bottom: 3px dashed white;
+}
+
+.laneThree{
+  position: relative;
+  width: 1200px;
+  height:97px;
+  border-bottom: 3px dashed white;
+}
+
+.laneTwo {
   position: relative;
   width: 1200px;
   height: 97px;
   border-bottom: 3px dashed white;
 }
 
-.fastestLane{
+.laneFive {
+  position: relative;
+  width: 1200px;
+  height: 97px;
+  border-bottom: 3px dashed white;
+}
+
+.laneFour{
   position: relative;
   width: 1200px;
   height:97px;
@@ -61,6 +89,13 @@
 .slowCar {
   position:absolute;
   margin-top: 20px;
+  height: 60px;
+  width: 100px;
+}
+
+.car {
+  position:absolute;
+  margin-bottom: 20px;
   height: 60px;
   width: 100px;
 }
