@@ -11,11 +11,13 @@
 
   </head>
   <body>
-    <!-- The Road (Game Board) -->
+    <!-- The start button -->
     <button class="startbtn" type="button" name="button">Start</button>
+    <!-- The Road (Game Board) -->
     <div class="board"> <!-- Board Start -->
       <div class="instructions">
-        <p>Do this to play the game</p>
+        <h3>Hey there chicken!</h3>
+        <p>Your task is to cross the road in one piece! Use the arrow keys &larr; 	&uarr; &darr; &rarr; to manoeuvre the chicken around the cars and get to the other side of the road! Make sure you don't touch the left, right and bottom borders of the road or you will lose the game. Your score is on the top right hand side of the board. The lower your score the better! </p>
       </div>
       <!-- Finish Line -->
       <div class="finish">
@@ -60,19 +62,23 @@
 
       <!-- Start Line  -->
       <div class="start">
-
         <!-- The Chicken -->
         <div class="player">
           <img class='chicken' src='images/chicken.png'>
         </div>
       </div>
+      <!-- The lose message -->
       <div class="lose">
         <button class="restartbtn">
-          <h3>Try Again</h3></button>
+          <h3>Game over chicken!</h3>
+          <p>Click to play again.</p></button>
       </div>
+      <!-- The win message -->
       <div class="win">
         <button class="restartbtn">
-          <h3>You Win!</h3></button>
+          <h3>You Win!</h3>
+          <p>Click to play again.</p>
+        </button>
       </div>
     </div> <!-- Board End-->
   </body>

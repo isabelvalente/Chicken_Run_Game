@@ -3,14 +3,17 @@
   position: absolute;
   bottom: 20%;
   left: 16%;
+  top: 50px;
   margin: auto;
   width: 800px;
-  height: 500px;
+  height: 390px;
   border: 3px white solid;
-  background: rgba(23, 23, 21, 0.85);
+  background: rgba(0, 0, 0);
   font-size: 25px;
   color:rgb(255, 255, 255);
   text-align: center;
+  font-family: "courier new", monospace;
+  z-index: 1;
 }
 
 
@@ -138,44 +141,51 @@
 
 /* Start button  */
 .startbtn {
-  font-size: 20px;
-  width: 80px;
-  height: 30px;
-  z-index: 1;
+  font-size: 25px;
+  width: 100px;
+  height: 40px;
+  z-index: 2;
   position: absolute;
-  left: 670px;
-  top: 550px;
+  left: 650px;
+  top: 480px;
+  border-radius: 5%;
+  font-family: "courier new", monospace;
 }
 
 .lose{
   display: none;
   position: absolute;
   bottom: 40%;
-  left: 40%;
+  left: 35%;
   margin: auto;
-  width: 200px;
-  height: 150px;
+  width: 320px;
+  height: 165px;
   border: 3px rgb(255, 255, 255) solid;
+  background: rgb(0, 0, 0);
+  font-family: "courier new", monospace;
 }
 
 .restartbtn {
   height: 100%;
   width: 100%;
-  background: rgba(23, 23, 21, 0.85);
+  background: rgba(0, 0, 0);
   margin: auto;
   font-size: 25px;
-  font: white;
+  color: white;
+  font-family: "courier new", monospace;
 }
 
 .win {
   display: none;
   position: absolute;
   bottom: 40%;
-  left: 40%;
+  left: 35%;
   margin: auto;
-  width: 200px;
-  height: 150px;
+  width: 320px;
+  height: 165px;
   border: 3px rgb(255, 255, 255) solid;
+  background: rgba(0, 0, 0);
+  font-family: "courier new", monospace;
 }
 
 .score {

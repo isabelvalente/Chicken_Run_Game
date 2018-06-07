@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  // Set up for score timer and game over function
   var gameOver = false;
   var score = 0;
 
@@ -7,18 +8,19 @@ $(document).ready(function(){
   $(".startbtn").click(function(){
     moveChicken(); //The chicken only moves once start button has been clicked
     timer(); //The timer only starts once start button has been clicked
-    getCoords();
+    getCoords(); // Once it starts
     $(".instructions").hide();
     $(".startbtn").hide();
     // Cars start moving only when start button has been clicked
-    setInterval(moveFastCar1,1000);
-    setInterval(moveFastCar2,1000);
-    setInterval(moveSlowCar1,3000);
-    setInterval(moveSlowCar2,3000);
-    setInterval(moveSlowCar3,3000);
-    setInterval(moveFastestCar,3000);
+    setInterval(moveFastCar1,500);
+    setInterval(moveFastCar2,500);
+    setInterval(moveSlowCar1,500);
+    setInterval(moveSlowCar2,500);
+    setInterval(moveSlowCar3,500);
+    setInterval(moveFastestCar,500);
   });
-  setInterval(getCoords,50);
+  // Get the cordinates for chicken and cars every 100 milliseconds to make collisions
+  setInterval(getCoords,100);
 
   // Function to move chicken
   function moveChicken(){
@@ -39,7 +41,7 @@ $(document).ready(function(){
         $(".player").css('top',position.top + 50 + 'px');
         break;
       }
-    })
+    });
 
   }
 
@@ -49,57 +51,48 @@ $(document).ready(function(){
     .css("left", "1100px")
     .animate({left: "-=1100px"}, 1500, 'linear', function(){
       moveFastCar1();
-    })
+    });
   }
 
-  // //
   function moveFastCar2(){
     $(".car4")
     .css("left", "1100px")
     .animate({left: "-=1100px"}, 5000, 'linear', function(){
       moveFastCar2();
-    })
+    });
   }
-  //
+
   function moveSlowCar1(){
     $(".car")
     .css("left", "0px")
-    .animate({left: "+=1100px"}, 4000, 'linear', function(){
+    .animate({left: "+=1100px"}, 2000, 'linear', function(){
       moveSlowCar1();
-    })
+    });
   }
-
-  //
 
   function moveSlowCar2(){
     $(".car2")
     .css("left", "0px")
     .animate({left: "+=1100px"}, 3000, 'linear', function(){
       moveSlowCar2();
-    })
+    });
   }
 
-  //
   function moveSlowCar3(){
     $(".car5")
     .css("left", "0px")
-    .animate({left: "+=1100px"}, 2000, 'linear', function(){
+    .animate({left: "+=1100px"}, 1500, 'linear', function(){
       moveSlowCar3();
-    })
+    });
   }
 
-  //
   function moveFastestCar(){
     $(".car3")
     .css("left", "0px")
     .animate({left: "+=1100px"}, 1700, 'linear', function(){
       moveFastestCar();
-    })
+    });
   }
-
-
-
-
 
   // Accessing co-ordinates for cars and chicken in order to detect collisions
   var chicken = {};
@@ -137,7 +130,6 @@ $(document).ready(function(){
     carObj3.right = carObj3.left + 80;
     carObj3.bottom = carObj3.top + 80;
 
-
     var car4 = $(".car4");
     carObj4.left = car4.offset().left;
     carObj4.top = car4.offset().top;
@@ -149,7 +141,6 @@ $(document).ready(function(){
     carObj5.top = car5.offset().top;
     carObj5.right = carObj5.left + 80;
     carObj5.bottom = carObj5.top + 80;
-
 
     var car6 = $(".car6");
     carObj6.left = car6.offset().left;
@@ -172,6 +163,7 @@ $(document).ready(function(){
       winner();
     }
 
+    // If chicken touches the right, left or bottom of the board, the game is over
     if (chicken.left < 120){
       stopGame();
     }
@@ -192,7 +184,6 @@ $(document).ready(function(){
     }
   }
 
-
   // Scoring - 1 point per second
   function timer (){
     counter = 0;
@@ -203,7 +194,7 @@ $(document).ready(function(){
     }
   }
 
-  // Lose conditions
+  // Lose condition
   function stopGame(){
     gameOver = true;
     $(".chicken").hide();
@@ -211,7 +202,7 @@ $(document).ready(function(){
     $(".lose").css("display", "block");
   }
 
-  // Win conditions
+  // Win condition
   function winner(){
     gameOver = true;
     $(".chicken").hide();
@@ -219,6 +210,7 @@ $(document).ready(function(){
     $(".win").css("display", "block");
   }
 
+  // Restart button
   $('.restartbtn').click(function(){
     location.reload();
   });
