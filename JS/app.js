@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-  console.log($(".player"));
+  var gameOver = false;
+  var score = 0;
 
   // Function to move chicken
   $(document).keydown(function(e){
@@ -27,7 +28,7 @@ $(document).ready(function(){
   function moveFastCar1(){
     $(".car6")
     .css("left", "1100px")
-    .animate({left: "-1100px"}, 4000, 'linear', function(){
+    .animate({left: "-=1100px"}, 4000, 'linear', function(){
       moveFastCar1();
     })
   }
@@ -36,7 +37,7 @@ $(document).ready(function(){
   function moveFastCar2(){
     $(".car4")
     .css("left", "1100px")
-    .animate({left: "-1100px"}, 4000, 'linear', function(){
+    .animate({left: "-=1100px"}, 4000, 'linear', function(){
       moveFastCar2();
     })
   }
@@ -80,6 +81,10 @@ $(document).ready(function(){
 
   // Interval to move cars continuously
   $(".startbtn").click(function(){
+    timer();
+    getCoords();
+    $(".instructions").hide();
+    $(".startbtn").hide();
     setInterval(moveFastCar1,2000);
     setInterval(moveFastCar2,2000);
     setInterval(moveSlowCar1,3000);
@@ -154,19 +159,46 @@ $(document).ready(function(){
     collision(chicken, carObj4);
     collision(chicken, carObj5);
     collision(chicken, carObj6);
+
+    if (chicken.bottom < 129) {
+      winner();
+    }
   }
 
   function collision(chicken, carObj) {
 
     if (chicken.left <= carObj.right && carObj.left <= chicken.right && chicken.top <= carObj.bottom && carObj.top <= chicken.bottom) {
-    console.log("hit!");;
+    stopGame();
     }
 
   }
 
 
+  // Scoring
+  function timer (){
+    console.log("hey");
+    counter = 0;
+    score = setInterval(timer, 1000);
+    function timer(){
+      counter++;
+      $(".score").text(counter);
+    }
+  }
 
 
+  function stopGame(){
+    gameOver = true;
+    $(".chicken").hide();
+    clearInterval(score);
+    $(".lose").css("display", "block");
+  }
+
+  function winner(){
+    gameOver = true;
+    $(".chicken").hide();
+    clearInterval(score);
+    $(".win").css("display", "block");
+  }
 
 
 

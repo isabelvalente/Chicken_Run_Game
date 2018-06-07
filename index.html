@@ -12,14 +12,14 @@
   </head>
   <body>
     <!-- The Road (Game Board) -->
+    <button class="startbtn" type="button" name="button">Start</button>
     <div class="board"> <!-- Board Start -->
       <div class="instructions">
-        <p>Do this to play the game</p> <br>
-        <button class="startbtn" type="button" name="button">Start</button>
+        <p>Do this to play the game</p>
       </div>
       <!-- Finish Line -->
       <div class="finish">
-        <div class="timer"></div>
+        <div class="score">0</div>
       </div>
       <!-- The Lanes -->
       <div class="laneSix">
@@ -66,9 +66,13 @@
           <img class='chicken' src='images/chicken.png'>
         </div>
       </div>
-      <div id="restart">
-        <button id="restartbtn">
+      <div class="lose">
+        <button class="restartbtn">
           <h3>Try Again</h3></button>
+      </div>
+      <div class="win">
+        <button class="restartbtn">
+          <h3>You Win!</h3></button>
       </div>
     </div> <!-- Board End-->
   </body>
