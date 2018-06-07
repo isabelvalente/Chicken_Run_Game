@@ -1,14 +1,24 @@
 /* instructions screen */
-/* .Instructions {
-  width: 1200px;
-  height: 800px;
-  background: black;
-  position: relative;
+.instructions {
+  display: none;
+  position: absolute;
+  bottom: 20%;
+  left: 16%;
   margin: auto;
-} */
+  width: 800px;
+  height: 500px;
+  border: 3px white solid;
+  background: rgba(23, 23, 21, 0.85);
+  font-size: 25px;
+  color:rgb(255, 255, 255);
+  text-align: center;
+}
+
 /* The Chicken */
 .player {
   position:absolute;
+  left: 550px;
+  top: 0px;
 }
 
 .chicken {
@@ -38,6 +48,7 @@
   height: 80px;
   background: #156627;
   margin: auto;
+  position:relative;
 }
 
 
@@ -131,11 +142,32 @@
   text-align: center;
 }
 
-button {
+.startbtn {
   font-size: 20px;
   width: 80px;
   height: 30px;
 }
+
+#restart{
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 40%;
+  margin: auto;
+  width: 200px;
+  height: 150px;
+  border: 3px rgb(255, 255, 255) solid;
+}
+
+#restartbtn {
+  height: 100%;
+  width: 100%;
+  background: rgba(23, 23, 21, 0.85);
+  margin: auto;
+  font-size: 25px;
+  font: white;
+}
+
 
 .timer {
   margin-left: 1000px;
@@ -145,5 +177,13 @@ button {
   border-radius: 10%;
   position: absolute;
   top: 20px;
-  font: white;
+  color: rgb(255, 255, 255);
+}
+
+.gameover {
+  width: 1200px;
+  height: 800px;
+  background: rgba(12, 12, 13, 0.81);
+  position: relative;
+  margin: auto;
 }
