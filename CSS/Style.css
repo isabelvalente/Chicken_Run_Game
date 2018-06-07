@@ -13,6 +13,7 @@
   text-align: center;
 }
 
+
 /* The Chicken */
 .player {
   position:absolute;
@@ -25,7 +26,7 @@
   width: 80px;
 }
 
-/* The board  */
+/* Start Line */
 .finish {
   width: 1200px;
   height: 120px;
@@ -34,6 +35,7 @@
   position: relative;
 }
 
+/* Game Board */
 .board {
   width: 1200px;
   height: 800px;
@@ -42,6 +44,7 @@
   margin: auto;
 }
 
+/* Start Line */
 .start{
   width: 1200px;
   height: 80px;
@@ -50,9 +53,7 @@
   position:relative;
 }
 
-
 /* The Lanes */
-
 .laneSix{
   position: relative;
   width: 1200px;
@@ -96,7 +97,6 @@
 }
 
 /* Cars */
-
 .slowCar {
   position:absolute;
   margin-top: 20px;
@@ -137,8 +137,6 @@
 }
 
 /* Start button  */
-
-
 .startbtn {
   font-size: 20px;
   width: 80px;
@@ -150,17 +148,6 @@
 }
 
 .lose{
-  display: none;
-  position: absolute;
-  bottom: 40%;
-  left: 40%;
-  margin: auto;
-  width: 200px;
-  height: 150px;
-  border: 3px rgb(255, 255, 255) solid;
-}
-
-.win{
   display: none;
   position: absolute;
   bottom: 40%;
@@ -191,15 +178,14 @@
   border: 3px rgb(255, 255, 255) solid;
 }
 
-
 .score {
-  margin-left: 1000px;
-  width:150px;
-  height:70px;
+  margin-left: 1020px;
+  width:120px;
+  height:55px;
   border: 3px solid white;
   border-radius: 10%;
   position: absolute;
-  top: 20px;
+  top: 45px;
   color: rgb(255, 255, 255);
   font-size: 45px;
   text-align: center;
