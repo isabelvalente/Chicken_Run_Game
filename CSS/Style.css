@@ -1,7 +1,27 @@
+/* instructions screen */
+.instructions {
+  position: absolute;
+  bottom: 20%;
+  left: 16%;
+  top: 50px;
+  margin: auto;
+  width: 800px;
+  height: 390px;
+  border: 3px white solid;
+  background: rgba(0, 0, 0);
+  font-size: 25px;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  font-family: "courier new", monospace;
+  z-index: 1;
+}
+
 
 /* The Chicken */
 .player {
   position:absolute;
+  left: 550px;
+  top: 0px;
 }
 
 .chicken {
@@ -9,13 +29,16 @@
   width: 80px;
 }
 
+/* Start Line */
 .finish {
   width: 1200px;
   height: 120px;
   background: #2b3934;
   margin: auto;
+  position: relative;
 }
 
+/* Game Board */
 .board {
   width: 1200px;
   height: 800px;
@@ -24,41 +47,59 @@
   margin: auto;
 }
 
+/* Start Line */
 .start{
   width: 1200px;
   height: 80px;
   background: #156627;
   margin: auto;
+  position:relative;
 }
 
-
 /* The Lanes */
-
-.slowLane{
+.laneSix{
   position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
-.fastLane {
+.laneOne{
+  position: relative;
+  width: 1200px;
+  height:97px;
+  border-bottom: 3px dashed white;
+}
+
+.laneThree{
+  position: relative;
+  width: 1200px;
+  height:97px;
+  border-bottom: 3px dashed white;
+}
+
+.laneTwo {
   position: relative;
   width: 1200px;
   height: 97px;
   border-bottom: 3px dashed white;
 }
 
-.fastestLane{
+.laneFive {
+  position: relative;
+  width: 1200px;
+  height: 97px;
+  border-bottom: 3px dashed white;
+}
+
+.laneFour{
   position: relative;
   width: 1200px;
   height:97px;
   border-bottom: 3px dashed white;
 }
 
-
-
 /* Cars */
-
 .slowCar {
   position:absolute;
   margin-top: 20px;
@@ -66,10 +107,27 @@
   width: 100px;
 }
 
-.fastCar {
+.car,
+.car2,
+.car3,
+.car5 {
   position:absolute;
-  left:1300px;
+  margin-bottom: 20px;
+  height: 60px;
+  width: 100px;
+}
+
+.car4,
+.car6 {
+  position:absolute;
+  left:1100px;
   margin-top: 20px;
+  height: 60px;
+  width: 100px;
+}
+
+.fastCar{
+  position:absolute;
   height: 60px;
   width: 100px;
 }
@@ -77,19 +135,76 @@
 .fastestCar {
   position:absolute;
   margin-top: 20px;
-  /* background-image: url(images/fastestCar.png), no-repeat; */
   height: 60px;
   width: 100px;
 }
 
 /* Start button  */
+.startbtn {
+  font-size: 25px;
+  width: 100px;
+  height: 40px;
+  z-index: 2;
+  position: absolute;
+  left: 650px;
+  top: 480px;
+  border-radius: 5%;
+  font-family: "courier new", monospace;
+}
 
-.start {
+.lose{
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 35%;
+  margin: auto;
+  width: 320px;
+  height: 165px;
+  border: 3px rgb(255, 255, 255) solid;
+  background: rgb(0, 0, 0);
+  font-family: "courier new", monospace;
+}
+
+.restartbtn {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0);
+  margin: auto;
+  font-size: 25px;
+  color: white;
+  font-family: "courier new", monospace;
+}
+
+.win {
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 35%;
+  margin: auto;
+  width: 320px;
+  height: 165px;
+  border: 3px rgb(255, 255, 255) solid;
+  background: rgba(0, 0, 0);
+  font-family: "courier new", monospace;
+}
+
+.score {
+  margin-left: 1020px;
+  width:120px;
+  height:55px;
+  border: 3px solid white;
+  border-radius: 10%;
+  position: absolute;
+  top: 45px;
+  color: rgb(255, 255, 255);
+  font-size: 45px;
   text-align: center;
 }
 
-button {
-  font-size: 20px;
-  width: 80px;
-  height: 30px;
+.gameover {
+  width: 1200px;
+  height: 800px;
+  background: rgba(12, 12, 13, 0.81);
+  position: relative;
+  margin: auto;
 }
