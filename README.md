@@ -16,7 +16,7 @@ Requirements: <br>
 ## Functionality
 This is an HTML browser game. The aim is to use the arros keys to manipulate the player (a chicken) to cross a road (the game board) with six lanes of cars moving at different speeds. To win the game the player must move the chicken to the other side of the road without touching any of the moving cars. If any car hits the player, the game is over. If the player tries to move outside the board boundaries, the game is over. The score increases at a rate of one point per second. The quicker the player can get across the road the better, so the lower the score, the better. 
 
-##Implementation
+## Implementation
 The funcitonality has been implemented using the following features:
 
 * HTML5 
@@ -79,7 +79,7 @@ In order to access the car I had to store it in a variable called 'fastCar2', bu
 ```
 Adding the car to the HTML meant I did not have to store it in a variable and could use JQuery to access it by its' class.
 
-##Sprint Three
+## Sprint Three
 For the third sprint features that could be added include:
  
 * Levels, where the speed and amount of cars could be altered as well as the lanes.
@@ -88,11 +88,11 @@ For the third sprint features that could be added include:
 * Adding a multiplayer game where two chickens try to race across the road.
 
 ##Screenshots
-####Instructions screen
+#### Instructions screen
 ![image](Images/instructions.png)
 
-####Win screen
+#### Win screen
 ![image](Images/youwin.png)
 
-####Lose Screen
+#### Lose Screen
 ![image](Images/lose.png)
