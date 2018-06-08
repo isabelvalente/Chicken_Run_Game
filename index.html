@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <script src="JS/app.js" charset="utf-8"></script>
+    <title>Chicken Run</title>
+
+  </head>
+  <body>
+    <!-- The start button -->
+    <button class="startbtn" type="button" name="button">Start</button>
+    <!-- The Road (Game Board) -->
+    <div class="board"> <!-- Board Start -->
+      <div class="instructions">
+        <h3>Hey there chicken!</h3>
+        <p>Your task is to cross the road in one piece! Use the arrow keys &larr; 	&uarr; &darr; &rarr; to manoeuvre the chicken around the cars and get to the other side of the road! Make sure you don't touch the left, right and bottom borders of the road or you will lose the game. Your score is on the top right hand side of the board. The lower your score the better! </p>
+      </div>
+      <!-- Finish Line -->
+      <div class="finish">
+        <div class="score">0</div>
+      </div>
+      <!-- The Lanes -->
+      <div class="laneSix">
+        <div class="car5">
+          <img class='slowCar'src='images/slowCar.png'>
+        </div>
+      </div>
+
+      <div class="laneFive">
+        <div class="car4">
+          <img class='fastCar'src='images/fastCar.png'>
+        </div>
+      </div>
+
+      <div class="laneFour">
+        <div class="car3">
+          <img class='slowCar'src='images/slowCar.png'>
+        </div>
+      </div>
+
+      <div class="laneThree">
+        <div class="car2">
+          <img class='fastestCar'src='images/fastestCar.png'>
+        </div>
+      </div>
+
+      <div class="laneTwo">
+        <div class="car6">
+          <img class='fastCar'src='images/fastCar.png'>
+        </div>
+      </div>
+
+      <div class="laneOne">
+        <div class="car">
+          <img class='slowCar'src='images/slowCar.png'>
+        </div>
+      </div>
+
+      <!-- Start Line  -->
+      <div class="start">
+        <!-- The Chicken -->
+        <div class="player">
+          <img class='chicken' src='images/chicken.png'>
+        </div>
+      </div>
+      <!-- The lose message -->
+      <div class="lose">
+        <button class="restartbtn">
+          <h3>Game over chicken!</h3>
+          <p>Click to play again.</p></button>
+      </div>
+      <!-- The win message -->
+      <div class="win">
+        <button class="restartbtn">
+          <h3>You Win!</h3>
+          <p>Click to play again.</p>
+        </button>
+      </div>
+    </div> <!-- Board End-->
+  </body>
+</html>
