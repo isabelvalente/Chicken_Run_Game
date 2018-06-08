@@ -12,12 +12,12 @@ $(document).ready(function(){
     $(".instructions").hide();
     $(".startbtn").hide();
     // Cars start moving only when start button has been clicked
-    setInterval(moveFastCar1,500);
-    setInterval(moveFastCar2,500);
-    setInterval(moveSlowCar1,500);
-    setInterval(moveSlowCar2,500);
-    setInterval(moveSlowCar3,500);
-    setInterval(moveFastestCar,500);
+    setInterval(moveFastCar1,50);
+    setInterval(moveFastCar2,50);
+    setInterval(moveSlowCar1,50);
+    setInterval(moveSlowCar2,50);
+    setInterval(moveSlowCar3,50);
+    setInterval(moveFastestCar,50);
   });
   // Get the cordinates for chicken and cars every 100 milliseconds to make collisions
   setInterval(getCoords,100);
