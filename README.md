@@ -14,18 +14,18 @@ Requirements: <br>
 * Game must look visually appealing
 
 ## Functionality
-This is an HTML browser game. The aim is to use the arros keys to manipulate the player (a chicken) to cross a road (the game board) with six lanes of cars moving at different speeds. To win the game the player must move the chicken to the other side of the road without touching any of the moving cars. If any car hits the player, the game is over. If the player tries to move outside the board boundaries, the game is over. The score increases at a rate of one point per second. The quicker the player can get across the road the better, so the lower the score, the better. 
+This is an HTML browser game. The aim is to use the arros keys to manipulate the player (a chicken) to cross a road (the game board) with six lanes of cars moving at different speeds. To win the game the player must move the chicken to the other side of the road without touching any of the moving cars. If any car hits the player, the game is over. If the player tries to move outside the board boundaries, the game is over. The score increases at a rate of one point per second. The quicker the player can get across the road the better, so the lower the score, the better.
 
 ## Implementation
 The funcitonality has been implemented using the following features:
 
-* HTML5 
+* HTML5
 * CSS3
 * JQuery
 * Javascript
 
-## Usage 
-####Download
+## Usage
+#### Download
 To download code visit the github repo name Sparta-Core-Project-One and click the clone or download button to download as zip.
 Alternatively the following command can be copied into the terminal:
 
@@ -33,14 +33,14 @@ Alternatively the following command can be copied into the terminal:
 git clone hub.com/isabelvalente/Sparta-JQuery-TicTacToe.git
 ```
 
-####Customising
+#### Customising
 To customise the game modify the contents of the following files:
 
 * JS/app.js
 * index.html
 * CSS/style.css
 
-####Running the game
+#### Running the game
 
 To run the game open index.html on any browser. Or visit github pages [here](www.github.com).
 
@@ -66,7 +66,7 @@ function moveFastCar2(){
 ```
 
 In order to access the car I had to store it in a variable called 'fastCar2', but this made it difficult to pick up each car as it was respawned.
- 
+
 #### My current code for moving the cars:
 ```javascript
  function moveFastCar2(){
@@ -81,13 +81,13 @@ Adding the car to the HTML meant I did not have to store it in a variable and co
 
 ## Sprint Three
 For the third sprint features that could be added include:
- 
+
 * Levels, where the speed and amount of cars could be altered as well as the lanes.
 * Adding static objects to the gameboard so the player would have to avoid both the chicken and static objects.
 * Adding an infitnity mode where the lanes moved down the page and the player plays for as long as they can.
 * Adding a multiplayer game where two chickens try to race across the road.
 
-##Screenshots
+## Screenshots
 #### Instructions screen
 ![image](Images/instructions.png)
 
